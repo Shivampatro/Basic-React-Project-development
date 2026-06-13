@@ -1,0 +1,135 @@
+.bt-topbar {
+  background: #3a2d6b;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.bt-topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.bt-topitem {
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  font-weight: 700;
+}
+/* BookTicket styles */
+.book-ticket {
+  padding: 28px 16px 48px;
+  background: #fff;
+}
+
+.bt-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.bt-title {
+  text-align: center;
+  color: #3a2d6b; /* deep purple */
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+  font-weight: 700;
+}
+
+.bt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bt-row {
+  display: flex;
+  gap: 18px;
+  align-items: flex-end;
+}
+
+.bt-from-to { align-items: center; }
+
+.bt-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-field.full { flex: 1 1 100%; }
+
+.bt-field label {
+  font-size: 13px;
+  color: #4b377f;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.bt-field input,
+.bt-field select {
+  height: 44px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #d1cfe3;
+  font-size: 15px;
+  outline: none;
+}
+.input-with-icon { position: relative; }
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #4b377f;
+  font-size: 18px;
+}
+.input-with-icon input,
+.input-with-icon select { padding-left: 42px; }
+
+.bt-field input::placeholder { color: #6b5b98; }
+
+.bt-swap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e6e1f4;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #4b377f;
+}
+
+.bt-checkboxes {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  color: #3b2d6b;
+  font-weight: 600;
+}
+
+.bt-checkboxes label { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.bt-checkboxes input[type="checkbox"] { width: 18px; height: 18px; accent-color: #3a2d6b; }
+
+.search-btn {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bt-cta { display: flex; justify-content: center; margin-top: 6px; }
+
+@media (max-width: 880px) {
+  .bt-row { flex-direction: column; }
+  .bt-swap { align-self: center; }
+}
