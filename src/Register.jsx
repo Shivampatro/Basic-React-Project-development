@@ -17,8 +17,32 @@ const Register = () => {
 
     const onSubmitHandler =(e) => {
         e.preventDefault();
-        alert('Form submitted successfully');
-        console.log(formData);
+        (async () => {
+          try {
+            const payload = {
+              name: formData.name,
+              email: formData.emailid, // map emailid -> email
+              password: formData.password,
+              mobileno: formData.mobileno,
+              workstatus: formData.workstatus
+            }
+            const res = await fetch('http://localhost:5000/api/register', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            })
+            const data = await res.json()
+            if (res.ok) {
+              alert('Registration saved — id: ' + data.insertedId)
+              setFormData(initialState)
+            } else {
+              alert('Registration failed: ' + (data.error || JSON.stringify(data)))
+            }
+          } catch (err) {
+            console.error(err)
+            alert('Error: ' + err.message)
+          }
+        })()
     }  
     const resetHandler = () => {
   setFormData(initialState);
