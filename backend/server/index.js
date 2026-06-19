@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import Booking from './models/Booking.js'
+import contactsRouter from './routes/web.js'
 
 // Load `.env` from the server folder, then also attempt to load
 // a project-root `.env` (useful if you keep env at project root).
@@ -25,6 +26,10 @@ async function connectDb() {
     console.warn('MONGODB_URI not set — server will run but DB is not connected')
     return
   }
+
+  // Mount contacts routes
+  app.use('/api/contacts', contactsRouter)
+
   try {
     await mongoose.connect(MONGODB_URI)
     console.log('MongoDB connected')
