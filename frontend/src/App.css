@@ -188,9 +188,12 @@ html, body, #root {
   height: 100%;
 }
 
+html, body, #root {
+  background: var(--bg) !important;
+}
+
 body {
   margin: 0;
-  background: #0b1220; /* dark navy */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -202,6 +205,21 @@ body {
   margin-top: 32px;
   min-height: 100vh;
   justify-content: flex-start;
+  color: #ffffff; /* make main content text white */
+}
+
+/* Ensure tables and forms inside app-container are readable on dark background */
+.app-container table,
+.app-container th,
+.app-container td {
+  color: #ffffff;
+}
+
+.app-container label,
+.app-container input,
+.app-container textarea,
+.app-container select {
+  color: #ffffff;
 }
 
 /* Project component styles (text-only colors) */

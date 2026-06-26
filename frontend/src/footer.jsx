@@ -1,5 +1,10 @@
 const Footer = () => {
-  return <div className="footer-content">This is Footer component</div>
+  return (
+    <div>
+        <h5 style={{ color: "magenta" }}>
+      This is Footer component
+    </h5> </div>
+  )
 }
 
 export default Footer

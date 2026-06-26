@@ -15,7 +15,7 @@
 .logo {
   font-size: 20px;
   font-weight: 700;
-  color: var(--text, #111);
+  color: #ffffff;
   letter-spacing: 0.4px;
 }
 
@@ -37,13 +37,20 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: var(--muted);
+  color: #ffffff; /* link text in navbar */
   font-size: 15px;
   font-weight: 600;
   transition: color 0.18s ease, transform 0.12s ease;
 }
 
-.navbar-links a:hover { color: var(--text); transform: translateY(-2px); }
+.navbar-links a:hover { color: #e6e6e6; transform: translateY(-2px); }
+
+/* Ensure other navbar action text is visible on dark background */
+.nav-actions,
+.nav-actions a,
+.nav-actions button {
+  color: #ffffff;
+}
 
 /* Small CTA wrapper */
 .navbar > div a.btn-primary {

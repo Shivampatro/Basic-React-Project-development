@@ -1,7 +1,7 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #000000; /* project background set to black */
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -108,4 +108,20 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* Make labels in forms inside cards (e.g., Add Contact) render black */
+.card .col-form-label {
+  color: #000 !important;
+}
+
+/* Ensure text typed into inputs and textareas inside cards is black */
+.card .form-control {
+  color: #000 !important;
+}
+
+/* Placeholder text inside the Add Contact form */
+.card .form-control::placeholder {
+  color: #000 !important;
+  opacity: 0.6;
 }
